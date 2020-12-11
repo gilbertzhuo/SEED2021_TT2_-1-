@@ -13,7 +13,7 @@ import About from './Transaction'
 import Contact from './ContactUs'
 import ApiProg from './Transfer'
 import ViewBalance from './ViewBalance';
-function App() {
+function App(props) {
   return (
       <div>
         <Router>
