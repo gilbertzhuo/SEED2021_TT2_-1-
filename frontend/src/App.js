@@ -17,8 +17,8 @@ var config = {
 class App extends Component {
   state={
     accounts:null,
-    accNames:null,
-    accBal:[]
+    accName:null,
+    accBal:null
   }
   async postView(){
     console.log("postView()...");
@@ -27,7 +27,8 @@ class App extends Component {
     console.log("hold arr: res.data",hold[0]);
     this.setState({accounts:Object.values(hold[0])});
     
-    this.setState({accNames:Object.values(hold[0].accountName)})
+    this.setState({accName:hold[0].accountName});
+    this.setState({accBal:hold[0].availableBal});
   }
 
   handleView = () =>{
@@ -43,7 +44,8 @@ class App extends Component {
           >
             Magic Button
           </button>
-          <h2>{this.state.accNames}</h2>
+          <h2>{this.state.accName}</h2>
+          <h2>{this.state.accBal}</h2>
       </React.Fragment>
     );
   }
