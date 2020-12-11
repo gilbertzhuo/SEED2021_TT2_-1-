@@ -13,7 +13,7 @@ function NavigationMenu(props){
                     <Link to="/" 
                     className="text-blue-500 p-3 border-t border-b block"
                     onClick= {(props.closeMenu)}>
-                        You received $18 from Yong Chun
+                        Check out new deals on the home page!
                     </Link>
                 </li>
                 <li>

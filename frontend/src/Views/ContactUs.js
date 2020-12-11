@@ -7,29 +7,29 @@ function Contact(){
             <div>
                 <h1 className="font-bold">This is the Contact page</h1>
                 <h2>
-                    Our Github Link is: 
+                    Our Members: 
                   
                 </h2>
                 {/* <CounterExample/> */}
 
-                <a className="App-link" href="https://github.com/gilbertzhuo">
+                <a className="text-blue-500" href="https://github.com/gilbertzhuo">
                         Gilbert
                 </a>
                 <br/>
-                <a className="App-link" href="https://github.com/orelanthos32/">
+                <a className="text-blue-500" href="https://github.com/orelanthos32/">
                         Bryan
                 </a>
                 <br/>
-                <a className="App-link" href="https://github.com/byc7">
+                <a className="text-blue-500" href="https://github.com/byc7">
                         Yong Chun
                 </a>
                 <br/>
-                <a className="App-link" href="https://github.com/tjaslyn">
+                <a className="text-blue-500" href="https://github.com/tjaslyn">
                         Jaslyn
                 </a>
                 <br />
 
-                <a className="App-link" href="https://github.com/rowter4">
+                <a className="text-blue-500" href="https://github.com/rowter4">
                         Imaan
                 </a>
                 <br />
