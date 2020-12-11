@@ -1,52 +1,16 @@
-import HelloWorld from './Components/HelloWorldFunc'
-import HelloWorldClass from './Components/HelloWorldClass'
-//import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React, {useState} from 'react';
+import Login from './Views/Login';
+import Home from './Views/Home';
+import './App.css';
 
-import React from 'react';
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import Home from './Views/Home'
-import About from './Views/Transaction'
-import Contact from './Views/ContactUs'
-import ApiProg from './Views/Transfer'
-import ViewBalance from './Views/ViewBalance';
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
-      <div>
-
-        <Router>
-          <Header/>
-          <div className="p-3">
-            <Switch>
-              <Route exact path="/">
-                <Home/>
-              </Route>
-              <Route path="/Transaction">
-                <About/>
-              </Route>
-              <Route path="/Contact">
-                <Contact/>
-              </Route>
-              <Route path="/Transfer">
-                <ApiProg/>
-              </Route>
-              <Route path="/ViewBalance">
-                <ViewBalance/>
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-
-      </div>
-
+      <>
+      {isAuthenticated ? (<Home setIsAuthenticated={setIsAuthenticated}/>):(<Login setIsAuthenticated={setIsAuthenticated}/>) }
+      </>
   );
-  //footer removed between the last DIV
+ 
 }
 
 export default App;

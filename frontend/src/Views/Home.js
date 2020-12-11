@@ -1,55 +1,42 @@
 import React from 'react'
-import {Link} from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Header from '../Components/Header'
+import Contact from '../Views/ContactUs'
+import ApiProg from '../Views/Transfer'
+import ViewBalance from '../Views/ViewBalance';
 
 function Home(){
     return(
-            <div className="centre-align">
-                <h1 className="font-bold">Welcome in</h1>
+    <>
+          <Router>
+          <Header/>
+          <div className="p-3">
+            <Switch>
+              <Route exact path="/">
+                <Home/>
+              </Route>
+              <Route path="/Transaction">
+                <Home/>
+              </Route>
+              <Route path="/Contact">
+                <Contact/>
+              </Route>
+              <Route path="/Transfer">
+                <ApiProg/>
+              </Route>
+              <Route path="/ViewBalance">
+                <ViewBalance/>
+              </Route>
+            </Switch>
+          </div>
+        </Router>
 
-                <h2>  What do you want to do today?</h2>
-
-                <ul>
-                <li>
-                    <Link to="/Contact" 
-                    className="text-blue-500 p-3 border-t border-b block"
-                    >
-                        Contact Us
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/Transaction" 
-                    className="text-blue-500 p-3 border-t border-b block"
-                   >
-                        View Transaction History
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/Transfer" 
-                    className="text-blue-500 p-3 border-t border-b block"
-                   >
-                        Make Payments
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/ViewBalance" 
-                    className="text-blue-500 p-3 border-t border-b block"
-                   >
-                        ViewBalance
-                    </Link>
-                </li>
-            </ul>
-
-                <br/>
-                <br/>
-
-                <button> Make Payments </button>
-                <br/>
-                <button> View Transaction History </button>
-                <br />
-                <button> Logout </button>
-
-
-            </div>
+      </>
     )
 }
 export default Home
