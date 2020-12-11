@@ -21,7 +21,7 @@ function Transaction(){
 
     const fetchTransactions = async() => {
         const data = await fetch("https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/transaction/view", requestOptions);
-        
+
         const transactions = await data.json();
         console.log(transactions);
         setTransactions(transactions);

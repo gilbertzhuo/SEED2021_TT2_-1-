@@ -66,7 +66,7 @@ function Home(){
                     <ul>
                         <li>
                             <Link to="/Rewards" 
-                            className="text-black p-3 border-t border-b block"
+                            className="text-black p-3 border-t border-b"
                             >
                                 <span className = "text-xl">
                                     <FontAwesomeIcon 
