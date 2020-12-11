@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAdjust,faBalanceScale,faCreditCard,faHandshake } from '@fortawesome/free-solid-svg-icons'
+import { faPhoneSquare,faBalanceScale,faCreditCard,faHandshake } from '@fortawesome/free-solid-svg-icons'
 function Home(){
     return(
             <div className="centre-align">
@@ -16,7 +16,7 @@ function Home(){
                             >
                                 <span className = "text-xl">
                                     <FontAwesomeIcon 
-                                        icon={faAdjust}
+                                        icon={faPhoneSquare}
                                     />
                                 </span>
                                 Contact Us
