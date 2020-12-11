@@ -20,13 +20,14 @@ class App extends Component {
     accName:null,
     accBal:null
   }
+  
   async postView(){
     console.log("postView()...");
     const res = await axios.post('https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/accounts/view',data,config); //post(url,data)
     const hold = Object.values(res.data);
-    console.log("hold arr: res.data",hold[0]);
-    this.setState({accounts:Object.values(hold[0])});
-    
+    console.log("hold arr: res.data",hold);
+
+    //this.setState({accounts:Object.values(hold[0])});
     this.setState({accName:hold[0].accountName});
     this.setState({accBal:hold[0].availableBal});
   }
