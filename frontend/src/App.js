@@ -2,7 +2,19 @@ import React, { Component } from 'react';
 import './App.scss';
 
 var axios = require('axios');
-var data = JSON.stringify({"custID":1,"payeeID":1,"dateTime":new Date(2020,12,6),"amount":19,"expensesCat":"Shopping","eGift":false,"message":"hello there"});
+var data = JSON.stringify({"eGift": false,
+
+"dateTime": "2020-03-25T12:24:15.890Z",
+
+"custID": 2,
+
+"expensesCat": "Food",
+
+"amount": 0.10,
+
+"message": "",
+
+"payeeID": 20});
 var config = {
   method: 'post',
   headers: { 
@@ -30,9 +42,15 @@ class App extends Component {
 
   async postView(){ //postAdd
     console.log("postView()...");
-    const res = await axios.post('https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/transaction/add',data,config); //post(url,data)
-    const hold = Object.values(res);
-    console.log("hold arr: res",hold);
+    try{
+      const res = await axios.post('https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/transaction/add',data,config); //post(url,data)
+      const hold = Object.values(res);
+      console.log("hold arr: res",hold);
+    }
+    catch(error){
+      console.log( error.response.request._response ) 
+    }
+    
   }
 
 
