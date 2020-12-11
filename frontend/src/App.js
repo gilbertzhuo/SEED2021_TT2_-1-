@@ -14,19 +14,13 @@ var config = {
   data : data
 };
 
-axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
+
 
 class App extends Component {
   login = () =>{
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+      console.log('response',response);
     })
     .catch(function (error) {
       console.log(error);
