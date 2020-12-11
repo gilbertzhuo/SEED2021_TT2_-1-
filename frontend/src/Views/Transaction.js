@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 
 function Transaction(){
 
@@ -32,6 +33,16 @@ function Transaction(){
         <div>
             <h1> Transaction History </h1>
 
+            <ul>
+                <li>
+                    <Link to="/" 
+                    className="text-blue-500 p-3 border-t border-b block">
+                        Back To Home
+                    </Link>
+                </li>
+            </ul> 
+
+
             <table>
                 <tr>
                     <th>Date</th>
@@ -52,6 +63,9 @@ function Transaction(){
                 </tr>
                 ))}
             </table>
+
+          
+
         </div>
     )
 }
