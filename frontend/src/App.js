@@ -17,14 +17,14 @@ var config = {
 export async function postView(){
   console.log("postView()...");
   const res = await axios.post('https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/accounts/view',data,config); //post(url,data)
-  console.log("res",res);
-  return res;
+  console.log("res.data",res.data);
+  return res.data;
 }
 
 class App extends Component {
   login = () =>{
     console.log("login()...")
-    postView();
+    return postView();
   }
 
   render(){
