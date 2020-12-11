@@ -6,7 +6,6 @@ function Home(){
     return(
             <div className="centre-align">
                 <h1 className="font-bold text-center">Welcome User1</h1>
-
                 <h2 className="font-bold text-center">  What do you want to do today?</h2>
                 <div className="bg-red-300">
                         <ul>
