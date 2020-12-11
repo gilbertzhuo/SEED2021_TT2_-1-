@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-// import './App.scss';
 
 var axios = require('axios');
 var data = JSON.stringify({"custID":1});
@@ -27,7 +26,6 @@ class ViewBalance extends Component {
     const hold = Object.values(res.data);
     console.log("hold arr: res.data",hold[0]);
     this.setState({accounts:Object.values(hold[0])});
-    
     this.setState({accName:hold[0].accountName});
     this.setState({accBal:hold[0].availableBal});
   }
@@ -46,8 +44,18 @@ class ViewBalance extends Component {
             Click here to show Transaction Balance!
         </button>
         <br />
-          <h2>{this.state.accName}</h2>
-          <h2>{this.state.accBal}</h2>
+        <div className="container">
+          <form>
+            <div>
+            <label htmlFor="AccountName">Account Name:</label>
+            <input placeholder={this.state.accName} type="text" disabled/>
+            </div>
+            <div>
+            <label htmlFor="AccountBalance">Account Balance:</label>
+            <input placeholder={this.state.accBal}  type="text" disabled/>
+            </div>
+          </form>
+        </div>
         <br />
         <br />
             <ul>

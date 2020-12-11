@@ -16,7 +16,6 @@ import ViewBalance from './ViewBalance';
 function App() {
   return (
       <div>
-
         <Router>
           <Header/>
           <div className="p-3">
@@ -39,7 +38,9 @@ function App() {
             </Switch>
           </div>
         </Router>
-
+        <button  onClick={() => {
+              props.setIsAuthenticated(false);
+            }}>Logout</button>
       </div>
 
   );
