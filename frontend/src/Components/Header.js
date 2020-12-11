@@ -2,13 +2,17 @@ import React from 'react'
 import Navigation from './Navigation'
 function Header(){
     return(
-        <header className = "border-b-2 p-2 flex justify-between items center">
-            <span className="font-bold">
+        <div className="bg-gray-100">
+            <header className = "border-b-2 p-2 flex justify-between items center">
+            <span className="font-bold text-black">
                 AppName
             </span>
             
             <Navigation/>
         </header>
+
+        </div>
+        
     )
 }
 export default Header
