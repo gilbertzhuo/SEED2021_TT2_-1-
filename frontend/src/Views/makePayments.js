@@ -78,6 +78,7 @@ class MakePayments extends Component {
         <h1 className="font-bold">Make Payments Page</h1>
         <br />
         <br />
+        <div className="container">
         <form>
           <label for="amount">Amount:
             <br />
@@ -105,6 +106,7 @@ class MakePayments extends Component {
             </li>
           </ul>
         </form>
+        </div>
       </React.Fragment>
     );
   }
