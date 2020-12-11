@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAdjust,faBalanceScale,faCreditCard,faHandshake } from '@fortawesome/free-solid-svg-icons'
+import { faAdjust,faBalanceScale,faCreditCard,faHandshake,faGift } from '@fortawesome/free-solid-svg-icons'
 function Home(){
     return(
             <div className="centre-align">
@@ -59,6 +59,26 @@ function Home(){
                             </Link>
                         </li>
                     </ul>
+
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <Link to="/Rewards" 
+                            className="text-black p-3 border-t border-b block"
+                            >
+                                <span className = "text-xl">
+                                    <FontAwesomeIcon 
+                                        icon={faGift}
+                                    />
+                                </span>
+                                Rewards
+                            </Link>
+                        </li>
+                        
+                    </ul>
+
 
                 </div>
                 
