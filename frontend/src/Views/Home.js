@@ -1,44 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Header from '../Components/Header'
-import Contact from '../Views/ContactUs'
-import ApiProg from '../Views/Transfer'
-import ViewBalance from '../Views/ViewBalance';
-
-function Home(){
-    return(
-    <>
-          <Router>
-          <Header/>
-          <div className="p-3">
-            <Switch>
-              <Route exact path="/">
-                <Home/>
-              </Route>
-              <Route path="/Transaction">
-                <Home/>
-              </Route>
-              <Route path="/Contact">
-                <Contact/>
-              </Route>
-              <Route path="/Transfer">
-                <ApiProg/>
-              </Route>
-              <Route path="/ViewBalance">
-                <ViewBalance/>
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-
-      </>
-=======
 import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAdjust,faBalanceScale,faCreditCard,faHandshake,faGift } from '@fortawesome/free-solid-svg-icons'
@@ -123,7 +83,6 @@ function Home(){
                 </div>
                 
             </div>
->>>>>>> 55fb979e5f42f656d23216e3b532fef13ed40926
     )
 }
 export default Home
