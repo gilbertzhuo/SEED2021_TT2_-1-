@@ -41,27 +41,23 @@ class MakePayments extends Component {
     payeeID: 20
    
   }
-  async postView() {
+  async postView(e) {
+    e.preventDefault();
     console.log("postView()...");
-    
+    //this.setState({ dateTime: Date.now() });
     const res = await axios.post('https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/transaction/add', data, config); //post(url,data)
     const hold = Object.values(res.data);
-    console.log("hold arr: res.data", hold[0]);
+    console.log("hold arr: res.data", res);
 
-    this.setState({ accounts: Object.values(hold[0]) });
+    // this.setState({ accounts: Object.values(hold[0]) });
 
-    this.setState({ accounts: Object.values(hold[0]) });
-    this.setState({ accName: hold[0].accountName });
-    this.setState({ accBal: hold[0].availableBal });
+    // this.setState({ accounts: Object.values(hold[0]) });
+    // this.setState({ accName: hold[0].accountName });
+    // this.setState({ accBal: hold[0].availableBal });
   }
 
   handleView = () => {
     console.log("handleView() receives ", this.postView());
-  }
-
-  submitForm = () => {
-    this.setState({ dateTime: Date.now() });
-   
   }
 
   changeHandler = e => {
@@ -79,7 +75,7 @@ class MakePayments extends Component {
         <br />
         <br />
         <div className="container">
-        <form>
+        <form >
           <label for="amount">Amount:
             <br />
             <input name="amount" type="number" step="0.01" onChange={this.changeHandler}></input>
@@ -96,13 +92,13 @@ class MakePayments extends Component {
           </label>
 
          
-          <button> Submit </button>
+          <button onClick={this.postView}> Submit </button>
           <ul>
             <li>
               <Link to="/"
                 className="text-blue-500 p-3 border-t border-b block">
                 Back To Home
-                    </Link>
+              </Link>
             </li>
           </ul>
         </form>
