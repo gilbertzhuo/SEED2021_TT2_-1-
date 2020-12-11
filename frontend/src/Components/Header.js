@@ -5,7 +5,7 @@ function Header(){
         <div className="bg-gray-100">
             <header className = "border-b-2 p-2 flex justify-between items center">
             <span className="font-bold text-black">
-                AppName
+                DBSSEED1
             </span>
             
             <Navigation/>
