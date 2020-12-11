@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faBell } from '@fortawesome/free-solid-svg-icons'
 import NavigationMenu from "./NavigationMenu"
 function Navigation(){
     const [ShowMenu, setShowMenu] = useState(false)
@@ -26,7 +26,7 @@ function Navigation(){
 
             <span className = "text-xl">
                 <FontAwesomeIcon 
-                    icon={faBars}
+                    icon={faBell}
                     onClick={() => setShowMenu(!ShowMenu)}
                 />
             </span>
