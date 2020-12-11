@@ -4,8 +4,7 @@ import {useParams} from 'react-router-dom'
 
 function Transfer(){
     //set the URL
-    const {id} =useParams()
-    const URL =`https://5e9623dc5b19f10016b5e31f.mockapi.io/api/v1/products/3`
+/*    const URL =`https://5e9623dc5b19f10016b5e31f.mockapi.io/api/v1/products/3`
     const [product,setProduct] = useState(null)
 
     let content = null
@@ -36,14 +35,15 @@ function Transfer(){
             <div>
                 {product.description}
             </div>
-        </div>
-    }
+        </div>*/ 
+    
 
         return(
                 <div>
+                    This is the Transfer Page
+                    
                 
-                    {content}
-
+                
                 </div>
         )
 }
