@@ -43,7 +43,7 @@ class MakePayments extends Component {
   }
   async postView(e) {
     e.preventDefault();
-    console.log("postView()...");
+    console.log("postView()..");
     //this.setState({ dateTime: Date.now() });
     const res = await axios.post('https://cors-anywhere.herokuapp.com/https://u8fpqfk2d4.execute-api.ap-southeast-1.amazonaws.com/techtrek2020/transaction/add', data, config); //post(url,data)
     const hold = Object.values(res.data);
